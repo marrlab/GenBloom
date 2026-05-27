@@ -1,0 +1,33 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Runtime outputs — never commit
+logs/
+outputs/
+figures/
+wandb/
+
+# Large binary files — hosted on HuggingFace, not in git (see HUGGINGFACE.md)
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.npz
+*.h5
+*.hdf5
+
+# Feature bags live outside the repo
+data/*
+!data/README.md
+
+# Internal reference — never commit
+INTERNAL_PATHS.md
+ASSETS.md
+
+.env
+.venv/
+venv/
+.vscode/
+.claude/

@@ -1,0 +1,8 @@
+torch>=2.0.0
+xformers>=0.0.18
+numpy
+pandas
+matplotlib
+scikit-learn
+h5py
+huggingface_hub
