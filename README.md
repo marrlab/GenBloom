@@ -1,5 +1,21 @@
 # GenBloom
 
+## Genetically Aligned Patient Representations Improve Hematological Diagnosis
+*29th INTERNATIONAL CONFERENCE ON MEDICAL IMAGE COMPUTING AND COMPUTER ASSISTED INTERVENTION (MICCAI 2026)*
+
+[Paper link](https://doi.org/10.48550/arXiv.2605.29980) | [Download Model](https://huggingface.co/MarrLab/GenBloom) | [Cite](#reference)
+
+
+**Abstract:** Multimodal alignment of histopathology encoders with transcriptomic and genomic data has been shown to significantly improve performance in downstream diagnostic tasks. Hematological cytology is unique in that visual single-cell evaluation is often paired with cytogenetics and molecular genetics for blood cancer diagnosis. In this study, we present a framework to align single white blood cell images with chromosomal aberrations (karyotype) and somatic mutations from targeted gene panels. Our training strategy follows a two-stage approach: (i) self-supervised, vision-only pretraining of a transformer aggregator using an iBOT head on a cohort of over 1500 patients, and (ii) genetic alignment via supervised contrastive loss on acute myeloid leukemia patients. Our genetically aligned patient encoder improves hematological diagnostic tasks, outperforming slide-level histopathology foundation models. Additionally, the model provides off-the-shelf retrieval capabilities for diseases and genetic alterations. Incorporating genetic data into patient encoders increases the quality of patient representations, providing a framework that aligns with clinical diagnostic workflows and paves the way for future multimodal hematology-specific AI.
+
+<img src="assets/pretrain.jpg" alt="GenBloom data and training" width="800" />
+
+## Performance of GenBloom
+**GenBloom** (**Gen**etically Aligned **Bloo**d **M**odel) is a transformer-based patient-level encoder for peripheral blood smears. It outperforms computational pathology slide encoders on patient-level hematology tasks, despite using less training data and having fewer model parameters.
+
+<img src="assets/performance.jpg" alt="GenBloom performance" width="800" />
+
+---
 Inference and reproducibility code for **GenBloom**, a genetically-aligned foundation model for peripheral blood smears.
 
 - Model weights: [`MarrLab/GenBloom`](https://huggingface.co/MarrLab/GenBloom)
@@ -82,3 +98,14 @@ python plot_barplots.py --output-dir figures
 ## License
 
 Apache 2.0 — see `LICENSE`. Derived from Meta AI's DINOv2.
+
+## Reference
+
+```
+@article{dasdelen2026genetically,
+  title={Genetically Aligned Patient Representations Improve Hematological Diagnosis},
+  author={Dasdelen, Muhammed Furkan and Ozlugedik, Fatih and Looser, Ilaria and Umer, Rao Muhammad and Pohlkamp, Christian and Marr, Carsten},
+  journal={arXiv preprint arXiv:2605.29980},
+  year={2026}
+}
+```
